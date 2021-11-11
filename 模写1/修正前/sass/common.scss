@@ -2,7 +2,7 @@
 
 @mixin clearfix {
   &:after {
-    content: ".";
+    content: "";
     display: block;
     clear: both;
     height: 0;
@@ -59,7 +59,7 @@
 .b-img{
   object-fit: cover;
   height: 610px;
-  width: 100vw;
+  width: 100%;
 }
 
 .subtitle{
