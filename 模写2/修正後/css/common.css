@@ -1,133 +1,56 @@
-.wrap {
-  max-width: 850px;
-  margin: 0 auto;
+@charset "UTF-8";
+/*命名規則：OOCSS*/
+body {
+  margin: 0%;
 }
 
-.top {
+.separate-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 60px;
-  margin: 0 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 700px;
 }
 
-.logo {
-  background-color: #050935;
-  width: 130px;
-  text-align: center;
-  height: 40px;
-  line-height: 40px;
-  font-size: 24px;
-  color: white;
-}
-
-.logo__text {
-  font-size: 24px;
-  color: white;
-  text-decoration: none;
-}
-
-.content {
-  gap: 30px;
-}
-
-.content__headline {
-  list-style: none;
-  display: inline-block;
-}
-
-.content__headline:first-child {
-  margin-right: 30px;
-}
-
-.content__headline--text {
-  font-size: 14px;
-  color: black;
-  text-decoration: none;
-}
-
-.b-img {
-  width: 100%;
-  max-width: 1920px;
-  height: 600px;
+.img {
+  width: 49.4%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-@media screen and (max-width: 600px) {
-  .b-img {
-    height: calc(100vh - 60px);
-  }
+.recip-box {
+  padding: 45px 50px 50px 50px;
 }
 
-.subtitle {
-  text-align: center;
-  margin-top: 30px;
-  width: 100%;
-}
-
-.subtitle__text {
-  display: inline-block;
-  border-bottom: 1px solid black;
-  padding-bottom: 2px;
-}
-
-.a-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.a-section__img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-right: 30px;
-}
-
-@media screen and (max-width: 600px) {
-  .a-section__img {
-    margin-right: 0;
-  }
-}
-
-.a-section__textarea {
-  text-align: left;
-}
-
-.a-section__textarea--subtitle {
+.f-title {
+  font-size: 28px;
   margin-top: 0;
-  font-size: 15px;
 }
 
-.a-section__textarea--text {
-  width: 450px;
-  display: inline-block;
-  margin: 0;
+.m-title {
+  margin-top: 0;
 }
 
-@media screen and (max-width: 600px) {
-  .a-section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
+.text-font {
+  font-size: 16.3px;
+  font-weight: lighter;
+  color: #474747;
 }
 
-.b-big-block ul {
+.f-subtitle {
+  font-size: 20px;
+  border-bottom: solid 0.8px #b9b9b9;
+  margin-top: 40px;
+}
+
+.m-subtitle {
+  margin-top: 40px;
+}
+
+.flexbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,44 +59,74 @@
           justify-content: space-between;
 }
 
-@media screen and (max-width: 600px) {
-  .b-big-block ul {
+.text-underline {
+  border-bottom: dotted 0.8px #b9b9b9;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.m-text {
+  margin: 5.5px;
+}
+
+.m2-margin {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.number-margin {
+  margin: 3px 0;
+  padding: 5px 0;
+}
+
+.d-all-recip {
+  border: solid 1px black;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.p-all-recip {
+  padding: 20px 60px;
+}
+
+.all-recip-link {
+  margin: 120px;
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.f-text-size {
+  text-align: center;
+  font-size: 11px;
+  margin: 15px 10px;
+}
+
+.f-text-bk {
+  color: black;
+}
+
+@media screen and (max-width: 830px) {
+  .separate-box {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: calc(100vw + 800px);
   }
-}
-
-.b-block {
-  width: 32%;
-  list-style: none;
-}
-
-@media screen and (max-width: 600px) {
-  .b-block {
+  .img {
     width: 100%;
-    margin-bottom: 30px;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
   }
-}
-
-.b-block__img {
-  max-width: 100%;
-}
-
-.b-block h3 {
-  text-align: center;
-}
-
-.b-block p {
-  text-align: center;
-}
-
-.f-box {
-  text-align: center;
-}
-
-.f-box__text {
-  font-size: 8px;
 }
 /*# sourceMappingURL=common.css.map */
