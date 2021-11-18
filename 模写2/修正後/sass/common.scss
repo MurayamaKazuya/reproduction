@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+@mixin sp {
+  @media screen and (max-width: 600px){
+    @content;
+  }
+}
+
+.wrap{
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.logo{
+  background-color: rgb(5, 9, 53);
+  width: 130px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  font-size: 24px;
+  color: white;
+
+  &__text{
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.content{
+  gap: 30px;
+
+  &__headline{
+    list-style: none;
+    display: inline-block;
+    &:first-child{
+      margin-right: 30px;
+    }
+
+    &--text{
+      font-size: 14px;
+      color: black;
+      text-decoration: none;
+    }
+  }
+}
+
+.b-img{
+  width: 100%;
+  max-width: 1920px;
+  height: 600px;
+  object-fit: cover;
+  @include sp(){
+    height: calc(100vh - 60px);
+  }
+}
+
+.subtitle{
+  text-align: center;
+  margin-top: 30px;
+  width: 100%;
+
+  &__text{
+    display: inline-block;
+    border-bottom: 1px solid black;
+    padding-bottom: 2px;
+  }
+}
+
+.a-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 30px;
+
+    @include sp(){
+      margin-right: 0;
+    }
+  }
+
+  &__textarea{
+    text-align: left;
+
+    &--subtitle{
+      margin-top: 0;
+      font-size: 15px;
+    }
+
+    &--text{
+      width: 450px;
+      display: inline-block;
+      margin:0;
+    }
+  }
+  @include sp(){
+    flex-direction: column;
+  }
+}
+
+.b-big-block ul{
+  display: flex;
+  justify-content: space-between;
+
+  @include sp(){
+    flex-direction: column;
+  }
+}
+
+.b-block{
+  width: 32%;
+  list-style: none;
+
+  @include sp(){
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  &__img{
+    max-width: 100%;
+  }
+
+  h3{
+    text-align: center;
+  }
+
+  p{
+    text-align: center;
+  }
+}
+
+.f-box{
+  text-align: center;
+
+  &__text{
+    font-size: 8px;
+  }
+}

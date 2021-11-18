@@ -1,0 +1,97 @@
+/*命名規則：OOCSS*/
+@charset "UTF-8";
+
+body{
+  margin: 0%;
+}
+.separate-box{
+  display: flex;
+  flex-direction: row;
+  height: 700px;
+}
+.img{
+  width: 49.4%;
+  object-fit: cover;
+}
+.recip-box{
+  padding: 45px 50px 50px 50px;
+}
+.f-title{
+  font-size: 28px;
+  margin-top: 0;
+}
+.m-title{
+  margin-top: 0;
+}
+.text-font{
+  font-size: 16.3px;
+  font-weight: lighter;
+  color: rgb(71, 71, 71);
+}
+.f-subtitle{
+  font-size: 20px;
+  border-bottom: solid 0.8px rgb(185, 185, 185);
+  margin-top: 40px;
+}
+.m-subtitle{
+  margin-top: 40px;
+}
+.flexbox{
+  display: flex;
+  justify-content: space-between;
+}
+.text-underline{
+  border-bottom: dotted 0.8px rgb(185, 185, 185);
+}
+.left-text{
+  text-align: left;
+}
+.right-text{
+  text-align: right;
+}
+.m-text{
+  margin: 5.5px;
+}
+.m2-margin{
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+.number-margin{
+  margin: 3px 0;
+  padding: 5px 0;
+}
+.d-all-recip{
+  border: solid 1px black;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+.p-all-recip{
+  padding:20px 60px;
+}
+.all-recip-link{
+  margin: 120px;
+  text-align: center;
+}
+.text-center{
+  text-align: center;
+}
+.f-text-size{
+  text-align: center;
+  font-size: 11px;
+  margin: 15px 10px;
+}
+.f-text-bk{
+  color: black;
+}
+
+@media screen and (max-width: 830px){
+  .separate-box{
+    flex-direction: column;
+    height: calc(100vw + 800px);
+  }
+  .img{
+    width: 100%;
+    object-fit: scale-down;
+  }
+}
