@@ -4,59 +4,59 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="./css/common.css">
-  <title>Document</title>
+  <title>Recipi diary</title>
 </head>
 <body>
-  <main class="separate-box">
-    <img class="img" src="./image/1800x2250.png">
-    <section class="recip-box">
-      <h1 class="f-title m-title">ひよこ豆とアボカドのタコス</h1>
-      <p class="text-font">たっぷりのひよこ豆とレンズ豆にアボガドとトマトを添えて、
-        少しライムを絞ったらおいしいタコスのできあがりです。</p>
-      <div>
-        <h2 class="f-subtitle m-subtitle">材料（2人分）</h2>
-        <div class="flexbox text-underline">
-          <p class="left-text m-text">テキストテキスト</p>
-          <p class="right-text m-text">1個</p>
-        </div>
-        <div class="flexbox text-underline">
-          <p class="left-text m-text">テキストテキスト</p>
-          <p class="right-text m-text">1個</p>
-        </div>
-        <div class="flexbox text-underline">
-          <p class="left-text m-text">テキストテキスト</p>
-          <p class="right-text m-text">1個</p>
-        </div>
-        <div class="flexbox text-underline">
-          <p class="left-text m-text">テキストテキスト</p>
-          <p class="right-text m-text">1個</p>
-        </div>
-        <div class="flexbox text-underline">
-          <p class="left-text m-text">テキストテキスト</p>
-          <p class="right-text m-text">1個</p>
-        </div>
-        <div>
-          <h2 class="f-subtitle m2-margin">作り方</h2>
-          <p class="text-underline number-margin">1.テキストテキストテキストテキスト</p>
-          <p class="text-underline number-margin">2.テキストテキストテキストテキスト</p>
-          <p class="text-underline number-margin">3.テキストテキストテキストテキスト</p>
-          <p class="text-underline number-margin">4.テキストテキストテキストテキスト</p>
-          <p class="text-underline number-margin">5.テキストテキストテキストテキスト</p>
-        </div>
+  <main>
+    <div class="separate-box">
+      <div class="image">
+        <img src="./image/1800x2250.png">
       </div>
-    </section>
+      <section class="recip-box">
+        <h1 class="f-title s-title">ひよこ豆とアボガドのタコス</h1>
+        <p class="text-font">たっぷりのひよこ豆とレンズ豆にアボガドとトマトを添えて、少しライムを絞ったらおいしいタコスのできあがりです。</p>
+        <h2 class="f-subtitle s-subtitle">材料（2人分）</h2>
+        <dl class="flexbox">
+          <dt class="left-text text-underline">テキストテキスト</dt>
+          <dd class="right-text text-underline">1個</dd>
+          <dt class="left-text text-underline">テキストテキスト</dt>
+          <dd class="right-text text-underline">1個</dd>
+          <dt class="left-text text-underline">テキストテキスト</dt>
+          <dd class="right-text text-underline">1個</dd>
+          <dt class="left-text text-underline">テキストテキスト</dt>
+          <dd class="right-text text-underline">1個</dd>
+          <dt class="left-text text-underline">テキストテキスト</dt>
+          <dd class="right-text text-underline">1個</dd>
+        </dl>
+          <h2 class="f-subtitle s-subtitle">作り方</h2>
+          <ol>
+            <li class="text-underline">テキストテキストテキストテキスト</li>
+            <li class="text-underline">テキストテキストテキストテキスト</li>
+            <li class="text-underline">テキストテキストテキストテキスト</li>
+            <li class="text-underline">テキストテキストテキストテキスト</li>
+            <li class="text-underline">テキストテキストテキストテキスト</li>
+          </ol>
+      </section>
+    </div>
+    <div class="all-recip-link">
+      <a class="f-all-recip s-all-recip" href="#">レシピ一覧を見る</a>
+    </div>
   </main>
   <footer>
-    <div class="all-recip-link">
-      <a class="d-all-recip p-all-recip" href="#">レシピ一覧を見る</a>
-    </div>
-    <div class="text-center">
-      <a class="f-text-size" href="#">Instagram</a>
-      <a class="f-text-size" href="#">Twitter</a>
-      <a class="f-text-size" href="#">Facebook</a>
-    </div>
-    <p class="f-text-size">© 2021 Recipe Diary</p>
+    <ul class="sns-flex f-footer-text">
+      <li class="m-sns">
+        <a class="f-footer-text" href="#">Instagram</a>
+      </li>
+      <li class="m-sns">
+        <a class="f-footer-text" href="#">Twitter</a>
+      </li>
+      <li class="m-sns">
+        <a class="f-footer-text" href="#">Facebook</a>
+      </li>
+    </ul>
+    <p class="f-footer-text text-center">© 2021 Recipe Diary</p>
   </footer>
 </body>
 </html>

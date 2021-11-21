@@ -1,97 +1,114 @@
 /*命名規則：OOCSS*/
 @charset "UTF-8";
 
-body{
-  margin: 0%;
+html{
+  font: 100%;
 }
+body{
+  font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
+}
+img{
+  max-width: 100%;
+}
+ul{
+  list-style: none;
+}
+footer{
+  padding: 20px;
+}
+
 .separate-box{
   display: flex;
-  flex-direction: row;
-  height: 700px;
+  margin-bottom: 60px;
 }
-.img{
-  width: 49.4%;
+.image{
+  width: 50%;
+}
+.image img{
+  width: 100%;
   object-fit: cover;
+  height: 700px;
+  vertical-align: bottom;
 }
 .recip-box{
-  padding: 45px 50px 50px 50px;
+  width: 50%;
+  padding: 40px 5% 0 5%;
 }
 .f-title{
-  font-size: 28px;
-  margin-top: 0;
+  font-size: 1.75rem;
 }
-.m-title{
-  margin-top: 0;
-}
-.text-font{
-  font-size: 16.3px;
-  font-weight: lighter;
-  color: rgb(71, 71, 71);
+.s-title{
+  margin-bottom: 20px;
 }
 .f-subtitle{
-  font-size: 20px;
-  border-bottom: solid 0.8px rgb(185, 185, 185);
-  margin-top: 40px;
+  font-size: 1.25rem;
+  border-bottom: solid 1px #ccc;
 }
-.m-subtitle{
-  margin-top: 40px;
+.s-subtitle{
+  padding-bottom: 5px;
+  margin: 40px 0 15px 0;
 }
 .flexbox{
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .text-underline{
   border-bottom: dotted 0.8px rgb(185, 185, 185);
 }
 .left-text{
-  text-align: left;
+  width: 85%;
+  padding: 6px 0;
 }
 .right-text{
+  width: 15%;
+  padding: 6px 0;
   text-align: right;
 }
-.m-text{
-  margin: 5.5px;
+ol li{
+  margin-left: 20px;
+  padding: 6px 0;
 }
-.m2-margin{
-  margin-top: 50px;
-  margin-bottom: 15px;
-}
-.number-margin{
-  margin: 3px 0;
-  padding: 5px 0;
-}
-.d-all-recip{
-  border: solid 1px black;
+.f-all-recip{
+  border: solid 1px #2b2a27;
   text-decoration: none;
   color: black;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
-.p-all-recip{
-  padding:20px 60px;
+.s-all-recip{
+  display: inline-block;
+  padding: 18px 60px;
 }
 .all-recip-link{
-  margin: 120px;
   text-align: center;
+  margin-bottom: 80px;
 }
 .text-center{
   text-align: center;
 }
-.f-text-size{
-  text-align: center;
-  font-size: 11px;
-  margin: 15px 10px;
+.sns-flex{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
-.f-text-bk{
+.m-sns{
+  margin: 0 10px;
+}
+.f-footer-text{
   color: black;
+  font-size: 0.75rem;
 }
 
-@media screen and (max-width: 830px){
+@media screen and (max-width: 834px){
   .separate-box{
     flex-direction: column;
-    height: calc(100vw + 800px);
   }
-  .img{
+  .image{
     width: 100%;
-    object-fit: scale-down;
+  }
+  .image img{
+    height: auto;
+  }
+  .recip-box{
+    width: 100%;
   }
 }
