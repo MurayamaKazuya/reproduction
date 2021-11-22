@@ -1,20 +1,25 @@
 /*命名規則：OOCSS*/
 @charset "UTF-8";
 
+
 body{
-  margin: 0%;
+  margin: 0;
+}
+main{
+  width: 100%;
 }
 .separate-box{
   display: flex;
-  flex-direction: row;
   height: 700px;
+  margin-bottom: 100px;
 }
 .img{
-  width: 49.4%;
+  width: 50%;
   object-fit: cover;
 }
 .recip-box{
   padding: 45px 50px 50px 50px;
+  width: 50%;
 }
 .f-title{
   font-size: 28px;
@@ -70,11 +75,11 @@ body{
   padding:20px 60px;
 }
 .all-recip-link{
-  margin: 120px;
   text-align: center;
 }
 .text-center{
   text-align: center;
+  margin-top: 110px;
 }
 .f-text-size{
   text-align: center;
@@ -88,10 +93,14 @@ body{
 @media screen and (max-width: 830px){
   .separate-box{
     flex-direction: column;
-    height: calc(100vw + 800px);
+    height: calc(100vw + 900px);
+    width: 100%;
   }
   .img{
     width: 100%;
     object-fit: scale-down;
+  }
+  .recip-box{
+    width: 87%;
   }
 }
