@@ -1,0 +1,148 @@
+/*命名規則：BEM*/
+@charset "UTF-8";
+
+@mixin sp {
+  @media screen and (max-width: 767px){
+    @content;
+  }
+}
+
+html{
+  font-size: 100%;
+}
+body{
+  color: #2d2d2d;
+  font-family: 'Crimson Text', serif;
+}
+a{
+  color:#2d2d2d;
+  text-decoration: none;
+}
+
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.top{
+  margin: 4% auto 0 auto;
+  width: 90vw;
+  @include sp(){
+    margin: 0;
+  }
+  &__image{
+    width: 100%;
+    vertical-align: bottom;
+    @include sp(){
+      object-fit: cover;
+      height: 50vh;
+    }
+  }
+}
+
+.menu{
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  margin: 0 auto 30px auto;
+  padding: 32px 0;
+  @include sp(){
+    width: 100%;
+    padding: 20px 18px;
+  }
+  &__title{
+    font-size: 14px;
+    line-height: 1px;
+    margin-right: 50px;
+  }
+  &__list{
+    display: flex;
+    &:last-child{
+      margin-right: 0;
+    }
+    &--cat{
+      list-style: none;
+      font-size: 0.875rem;
+      margin-right: 30px;
+      & a{
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
+
+#concept{
+  @include sp(){
+    flex-flow: column;
+  }
+}
+#work{
+  @include sp(){
+    flex-flow: column-reverse;
+  }
+}
+.article{
+  display: flex;
+  margin-bottom: 60px;
+  align-items: center;
+  @include sp(){
+    width: 100%;
+    box-sizing: border-box;
+    font-size:0;
+  }
+  &__image{
+    width: 50%;
+    @include sp(){
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    & img{
+      width: 100%;
+      vertical-align: bottom;
+    }
+  }
+  &__text{
+    width: 50%;
+    padding: 0 7%;
+    @include sp(){
+      width: 100%;
+      padding: 0;
+    }
+    &--subtitle{
+      font-size: 1.5rem;
+      font-weight: normal;
+      margin-bottom: 4px;
+      @include sp{
+        font-size: 1.25rem;
+      }
+    }
+    &--english{
+      display: inline-block;
+      margin-bottom: 25px;
+      @include sp(){
+        margin: 4px 0 0;
+      }
+    }
+    &--contents{
+      font-size: 13px;
+      letter-spacing: 2.5px;
+      @include sp(){
+        margin: 30px 0 25px 0;
+      }
+    }
+  }
+}
+
+.bottom{
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  padding: 20px 0;
+  &__title{
+    font-size: 14px;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+}
