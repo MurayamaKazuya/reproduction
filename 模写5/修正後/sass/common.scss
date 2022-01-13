@@ -1,0 +1,317 @@
+/*命名規則：SMACCS*/
+@charset "UTF-8";
+
+@mixin sp {
+  @media screen and (max-width: 900px){
+    @content;
+  }
+}
+
+/*base*/
+body,ul,li,a,h1,h2,h3,h4,p,dt,dd{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #e0e0e0;
+}
+a{
+  text-decoration: none;
+  color: #000000;
+  text-align: center;
+}
+nav{
+  margin: auto 0;
+  padding: 0 30px;
+  width: 320px;
+  @include sp{
+    padding: 0 16px;
+    margin: 0;
+  }
+}
+ul{
+  display: flex;
+  justify-content: space-between;
+}
+li{
+  list-style: none;
+  font-size: 14px;
+}
+h4{
+  font-size: 14px;
+  font-weight: 300;
+}
+img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+dl,dd{
+  font-size: 14px;
+  line-height: 30px;
+}
+dl{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  @include sp{
+    display: block;
+  }
+}
+dt{
+  width: 20%;
+}
+dd{
+  width: 80%;
+  @include sp{
+    margin:0px 18px;
+  }
+}
+
+/*layout*/
+.l-top{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  @include sp{
+    height: 80px;
+  }
+}
+.l-top-left{
+  display: flex;
+  margin: 0 auto;
+  width: 1055px;
+  @include sp{
+    flex-flow: column;
+    width: 100%;
+  }
+}
+.l-mainvisial{
+  height: 880px;
+}
+.l-news{
+  padding: 90px 20px;
+  max-width: 1040px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  @include sp{
+    width: 100%;
+  }
+}
+.l-article{
+  max-width: 900px;
+  @include sp{
+    flex-flow: column;
+  }
+}
+.l-about{
+  display: flex;
+  padding-bottom: 100px;
+  @include sp{
+    flex-flow: column;
+    padding-bottom: 60px;
+  }
+}
+.l-business{
+  padding-left: 20px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.business-article{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 80px;
+  @include sp{
+    flex-flow: column;
+    padding: 0;
+  }
+}
+.l-company{
+  width: 560px;
+  padding: 80px 60px;
+  margin: 160px 0 160px 0;
+  box-sizing: border-box;
+  @include sp{
+    width: 100%;
+    margin: 20px 0;
+    padding: 30px 20px;
+  }
+}
+.company-article{
+  position: relative;
+  width: 1060px;
+  margin:0 auto;
+  @include sp{
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+.l-footer{
+  padding: 40px 50px 20px 40px;
+  @include sp{
+    padding: 34px 16px;
+  }
+}
+.footer-flex{
+  display: flex;
+  justify-content: space-between;
+  @include sp{
+    flex-flow: column;
+    .logo{
+      padding-left: 0px;
+    }
+  }
+  p{
+    font-size: 14px;
+  }
+}
+
+
+/*module*/
+.logo{
+  font-size: 34px;
+  letter-spacing: 12px;
+  font-weight: 500;
+  padding: 18px 16px;
+  display: inline-block;
+  @include sp{
+    padding:10px 16px 0px 16px;
+    font-size: 28px;
+    letter-spacing: 8px;;
+  }
+}
+.contact{
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 12px;
+  width: 185px;
+  line-height: 80px;
+  @include sp{
+    display: none;
+  }
+}
+.header{
+  font-size: 34px;
+  font-size: 34px;
+  letter-spacing: 12px;
+  font-weight: 500;
+}
+.lead{
+  font-size: 14px;
+  font-weight:300;
+  &::after{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: #000000;
+    margin: 38px 0 60px 0;
+    @include sp{
+      margin: 20px 0 30px;
+    }
+  }
+}
+.tag{
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0 5px;
+  margin-left: 15px;
+}
+.news-text{
+  padding: 20px 0 0 0;
+}
+.post{
+  padding: 12px 0;
+  + li{
+  border-left: 1px solid #000000;
+  padding-left: 20px;
+  @include sp{
+    border-left: 0px;
+    padding-left: 0;
+  }
+  }
+}
+.about-visial{
+  width: 55%;
+  height: 400px;
+  @include sp{
+    width: 100%;
+  }
+}
+.about-textbox{
+  width: 45%;
+  padding: 180px 60px 0 60px;
+  box-sizing: border-box;
+  @include sp{
+    width: 100%;
+    padding:20px
+  }
+  p{
+    font-size: 14px;
+    line-height: 30px;
+  }
+}
+.business-visial{
+  @include sp{
+    padding: 0 30px;
+  }
+}
+.business-item{
+  width: calc(50% - 40px);
+  margin: 0 40px 40px 0;
+  position: relative;
+  &:nth-child(2n-1){
+    top: 90px;
+    @include sp{
+      top: 0px;
+    }
+  }
+  @include sp{
+    width: 100%;
+  }
+  p{
+    margin: 0 0 10px 25px;
+    &::before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 1px;
+    background-color: #000000;
+    position: relative;
+    top: 12px;
+    right:20px;
+    }
+  }
+}
+.company-visial{
+  width: 560px;
+  height: 450px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+  left:500px;
+  @include sp{
+    position: static;
+    transform: translate(0,0);
+    width: 100%;
+  }
+}
+.license{
+  font-size: 10px;
+  padding-left: 14px;
+  margin-top: 20px;
+  @include sp{
+    padding-left: 0px;
+    margin-top: 40px;
+  }
+}
+/*state*/
+
+/*thema*/
+.t-company{
+  background-color: #ffffff;
+}
+.t-footer{
+  background-color: #ffffff;
+}
