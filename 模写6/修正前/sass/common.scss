@@ -1,0 +1,315 @@
+/*命名規則：SMACCS*/
+@charset "UTF-8";
+
+@mixin sp {
+  @media screen and (max-width: 770px) {
+    @content;
+  }
+}
+
+/*base*/
+body {
+  font-family: serif;
+  background-color: rgb(214, 206, 193);
+}
+
+header,
+body,
+footer,
+section,
+h1,
+h2,
+a,
+ul,
+li,
+dl,
+dt,
+dd,
+iframe {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+img {
+  width: 100%;
+}
+
+footer {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/*layout*/
+.l-header {
+  writing-mode: vertical-rl;
+  padding: 58px 65px 20px 30px;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+
+  @include sp {
+    padding: 20px 10px;
+  }
+}
+
+.l-news {
+  margin: 180px auto 0;
+  max-width: 1024px;
+  writing-mode: vertical-rl;
+  width: 100%;
+
+  @include sp {
+    margin-top: 90px;
+  }
+}
+
+.l-product {
+
+  margin: 180px auto 0;
+  max-width: 1024px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @include sp {
+    margin-top: 90px;
+
+    .en-title {
+      display: none;
+    }
+  }
+}
+
+.l-product {
+  margin: 180px auto 90px;
+  max-width: 1024px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @include sp {
+    margin-top: 300px;
+
+    .en-title {
+      display: none;
+    }
+  }
+}
+
+.l-product-r {
+  writing-mode: vertical-rl;
+
+  @include sp {
+    margin-top: 90px;
+  }
+}
+
+.l-product-l {
+  writing-mode: vertical-lr;
+
+  @include sp {
+    margin-top: 90px;
+  }
+}
+
+.l-product-title {
+  display: flex;
+  vertical-align: top;
+}
+
+
+
+.l-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  padding: 30px 0;
+}
+
+/*module*/
+.logo {
+  color: #fff;
+  font-size: 42px;
+  letter-spacing: 10px;
+}
+
+nav {
+  margin-right: 50px;
+}
+
+.store {
+  position: absolute;
+  left: 40px;
+  bottom: 30px;
+  background-color: rgb(58, 58, 58);
+  padding: 0px 25px;
+
+  @include sp {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  a {
+    border: gray solid 2px;
+    padding: 25px 18px;
+    margin: 10px;
+    background-color: rgb(58, 58, 58);
+    font-weight: 500;
+
+    &:hover {
+      opacity: 50%;
+    }
+  }
+}
+
+.sub-title {
+  margin-bottom: 20px;
+  font-size: 38px;
+  font-weight: 300;
+  display: block;
+
+  @include sp {
+    font-size: 28px;
+    font-weight: 500;
+  }
+}
+
+.en-title {
+  font-size: 16px;
+  display: block;
+  margin: 0 auto;
+}
+
+.news-list {
+  margin: 100px 100px 0 0;
+
+  @include sp {
+    margin: 20px 20px 0 0;
+  }
+
+  dt {
+    border-right: black solid 1px;
+    padding: 10px 30px 10px 0;
+    font-size: 12px;
+
+    @include sp {
+      padding: 10px 10px 10px 0;
+
+      &:nth-of-type(n + 4) {
+        display: none;
+      }
+    }
+  }
+
+  dd {
+    padding: 10px 0 10px 30px;
+    font-size: 16px;
+    font-weight: 500;
+
+    @include sp {
+      padding: 10px 0 10px 10px;
+
+      &:nth-of-type(n + 4) {
+        display: none;
+      }
+
+      &:nth-of-type(3) {
+        border-left: black solid 1px;
+      }
+    }
+
+    &:last-child {
+      border-left: black solid 1px;
+    }
+  }
+}
+
+.p-img {
+  max-width: 700px;
+  width: 90%;
+  margin-top: 130px;
+  position: relative;
+
+  @include sp {
+    width: 90%;
+  }
+}
+
+.p-text {
+  color: #ffffff;
+  writing-mode: horizontal-tb;
+  background-color: rgba(245, 219, 70, 0.7);
+  position: absolute;
+  bottom: -30px;
+  left: -15px;
+  width: 250px;
+  text-align: center;
+  padding: 50px 0;
+
+  @include sp {
+    width: 400px;
+    padding: 25px 0;
+  }
+}
+
+.p-text2 {
+  color: #ffffff;
+  writing-mode: horizontal-tb;
+  background-color: rgba(136, 45, 33, 0.7);
+  position: absolute;
+  bottom: -30px;
+  right: -15px;
+  width: 250px;
+  text-align: center;
+  padding: 50px 0;
+
+  @include sp {
+    width: 400px;
+    padding: 25px 0;
+  }
+}
+
+.map {
+  width: 100%;
+  font-size: 0;
+
+  iframe {
+    width: 100%;
+  }
+}
+
+.right,
+.left {
+  writing-mode: vertical-rl;
+}
+
+.license {
+  font-size: 11px;
+  text-align: center;
+}
+
+/*state*/
+
+/*thema*/
+.t-header {
+  background-image: url(../image/mainvisual.png);
+  background-position: top center;
+  background-size: cover;
+
+  @include sp {
+    background-image: url(../image/mainvisual-sp.png);
+  }
+}
